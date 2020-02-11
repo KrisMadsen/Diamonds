@@ -1,0 +1,40 @@
+---
+title: "Diamonds Analysis"
+author: "Kristopher Madsen"
+date: "2/10/2020"
+output: html_document
+---
+
+# Reading the Excel File
+
+```{r}
+library(readxl)
+mydiamonds<-read_excel("diamonds.xlsx")
+```
+
+# Names of Variables
+```{r}
+names(mydiamonds)
+```
+
+# Top 6 Observations
+```{r}
+head(mydiamonds)
+```
+
+# Structure of Dataset
+```{r}
+str(mydiamonds)
+```
+
+# Creating a New Variable
+```{r}
+mydiamonds$pricetable<-mydiamonds$price + mydiamonds$table
+```
+
+# Summary of New Variable
+```{r}
+summary(mydiamonds$pricetable)
+```
+
+
